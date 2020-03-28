@@ -20,3 +20,7 @@ while not BonneEntree:
 while number != 1:
     number = collatz(number)
     print(number)
+
+Daksh = 'C\'est un garçon très mignon'
+for c in Daksh:
+    print('***'+c+'***')
