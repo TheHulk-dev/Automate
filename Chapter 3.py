@@ -24,3 +24,4 @@ while number != 1:
 Daksh = 'C\'est un garçon très mignon'
 for c in Daksh:
     print('***'+c+'***')
+    
