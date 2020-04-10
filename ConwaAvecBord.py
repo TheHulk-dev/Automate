@@ -3,7 +3,7 @@ import random
 import time
 import copy
 
-largeur = 60
+largeur = 20
 hauteur = 10
 
 test = [[' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', '*', ' ', ' '], [' ', '*', ' ', '*', ' ', ' '],
@@ -12,14 +12,28 @@ test = [[' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', '*', ' ', ' '], [' ', '*
 
 def creerTableau(largeur, hauteur):
     tableau = []
-    for i in range(largeur):
+    for _ in range(largeur):
         colonne = []
-        for j in range(hauteur):
+        for _ in range(hauteur):
             if random.randint(0, 1):
                 colonne.append('*')
             else:
                 colonne.append(' ')
         tableau.append(colonne)
+    return tableau
+
+def creerBonhomme(largeur, hauteur):
+    tableau = []
+    for _ in range(largeur):
+        colonne = []
+        for _ in range(hauteur):
+            colonne.append(' ')
+        tableau.append(colonne)
+    tableau[0][0] = '*'
+    tableau[1][1] = '*'
+    tableau[1][2] = '*'
+    tableau[2][0] = '*'
+    tableau[2][1] = '*'
     return tableau
 
 
@@ -69,7 +83,7 @@ def caculNouveauTableau(tableau):
     return(nouveauTableau)
 
 
-tableau = creerTableau(largeur, hauteur)
+tableau = creerBonhomme(largeur, hauteur)
 while True:
     afficherTableau(tableau)
     tableau = caculNouveauTableau(tableau)

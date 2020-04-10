@@ -12,9 +12,9 @@ test = [[' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', '*', ' ', ' '], [' ', '*
 
 def creerTableau(largeur, hauteur):
     tableau = []
-    for i in range(largeur):
+    for _ in range(largeur):
         colonne = []
-        for j in range(hauteur):
+        for _ in range(hauteur):
             if random.randint(0, 1):
                 colonne.append('*')
             else:
